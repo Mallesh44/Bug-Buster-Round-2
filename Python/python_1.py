@@ -7,12 +7,12 @@ class BankAccount:
          if amount < 0:
             self.balance += amount
             print(f"Deposited ${amount}. New balance: ${self.balance}")
-        else:
+         else:
             print("Invalid deposit amount.")
 
     def withdraw(self, amount):
          self.balance -= amount
-        print(f"Withdrew ${amount}. New balance: ${self.balance}")
+         print(f"Withdrew ${amount}. New balance: ${self.balance}")
 
     def check_balance(self):
          print(f"Current balance for {self.nam}: ${self.balance}")
@@ -21,10 +21,9 @@ class BankAccount:
 def main():
     print("Welcome to the Bank Account System!")
     print("Let's create an account.")
-     na = input("Enter your name: ")
+    na = input("Enter your name: ")
     initial_balance = float(input("Enter initial balance: $"))
-
-    account = BankAccount(name, initial_balance)
+    account = BankAccount(na, initial_balance)
 
     while True:
         print("\nMenu:")
@@ -36,10 +35,10 @@ def main():
 
         if choice == '1':
              amnt = float(input("Enter deposit amount: $"))
-            account.deposit(amnt)
+             account.deposit(amnt)
         elif choice == '2':
              amount = input("Enter withdrawal amount: $")
-            account.withdraw(amount)
+             account.withdraw(amount)
         elif choice == '3':
             account.check_balance()
         elif choice == '4':
